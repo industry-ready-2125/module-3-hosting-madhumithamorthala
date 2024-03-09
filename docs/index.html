@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe coffee company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .nav-first{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(17,138,203);
+            color:white;
+            display: flex;
+            justify-content: center;
+            height: 41px;
+            align-items: center;
+            margin-top: 0%;
+        }
+        .nav-second{
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .sec-names{
+            width:60%;
+        }
+        .sec-names:hover{
+            color:rgb(17, 138, 203);
+        }
+        .sec-names a{
+            margin-left: 18px;
+            font-weight: 900;
+        }
+        .sec-order{
+            background-color: rgb(17,138,203);
+            color:white;
+            font-weight:bolder;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:145px;
+            line-height: 7px;
+        }
+        .sec-profile{
+            font-size: 25px;
+        }
+        .sec-search{
+            font-size: 25px;
+        }
+        .sec-bag{
+            font-size: 25px;
+            margin-left: -44px;
+            padding: 0;
+        }
+        .sec-bag sup{
+            border-radius: 50%;
+            background-color: red;
+            padding: 3px;
+            margin-right: 0;
+            padding-bottom: 0;
+        }
+        .nav-third{
+            display: flex;
+            justify-content: space-evenly;
+            height:520px;
+            gap:10px;
+            margin-top:25px;
+            margin-left:20px;
+            margin-right:18px;
+            margin-bottom: 90px;
+        }
+        .nav-third img{
+            height:489px;
+        }
+        .nav-third h2{
+            font-size: 20px;
+            font-weight: bolder;
+            margin-top: 18px;
+        }
+        .nav-third  p{
+            font-weight: bold;
+        }
+        .box:hover{
+            color: rgb(17,138,203);
+        }
+
+        .nav-fourth {
+            margin-top: 40px;
+            height: 476px;
+            width: 100%;
+            display: block;
+        }
+
+        .nav-fourth .col {
+            width: 100%;
+            height: 100%; /* Ensure the .col div takes up the entire height of its parent */
+            background-size: cover; /* Make the background image cover the entire .col div */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Ensure the background image is not repeated */
+        }
+
+        .nav-fifth {
+            display: flex;
+            justify-content: space-between; /* Adjusted to evenly distribute the boxes */
+            height: 520px;
+            margin: 25px 20px 20px 20px; /* Combined margin shorthand */
+        }
+        
+        .nav-fifth img{
+            max-width: 100%; /* Ensure the image inside the box does not exceed its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .nav-fifth h2{
+            font-size: 20px;
+            font-weight: bolder;
+            margin-top: 18px;
+        }
+        .nav-fifth  p{
+            font-weight: bold;
+        }
+        .box:hover{
+            color: rgb(17,138,203);
+        }
+
+        .box {
+            flex: 1; /* Adjusted to make each box take equal space */
+            max-width: calc(33.33% - 5px); /* Adjusted max-width to fit three boxes with gaps */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0 5px; /* Added padding to create gaps between boxes */
+        }
+        .nav-sixth {
+            height: 288px;
+            background-color: rgb(17, 138, 203);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .sixth-one {
+            height: 240px;
+            width: 278px; /* Push the content to the left */
+        }
+        .sixth-one img{
+            margin-top:9px;
+            width:100%;
+            height: 150px;
+        }
+        .sixth-two{
+            color:white;
+            font-size: 6px;
+            font-weight: 100;
+        }
+        .sixth-sub i{
+            font-size: 17px;
+            margin-left:8px;
+        }
+        .sixth-three{
+            display: flex;
+            flex-direction: column;
+            color:white;
+            font-weight: 600;
+        }
+        .under:hover{
+            text-decoration: underline;
+        }
+        footer{
+            background-color: rgb(17, 138, 203);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-one{
+            color: white;
+            font-size: 19px;
+            font-weight: 900;
+        }
+        .footer-two{
+            margin-right: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20;
+            height:40px;
+            width:700px;
+        }
+        .footer-two input{
+            background-color: rgb(17, 138, 203);
+            border:1px solid white;
+            padding: 8px;
+            width: 500px;
+            border-collapse: collapse;
+        }
+        .footer-two .msg{
+            color: rgb(17, 138, 203);
+            background-color: white;
+            padding: 8px;
+            border: 1px solid white;
+            width:200px;
+        }
+        placeholder{
+            color:white;
+        }
+        a {
+            text-decoration: none;
+            color: inherit; /* or any color you prefer */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-first">
+        Free Shipping on All Orders Over $40
+    </div>
+    <div class="nav-second">
+        <div class="sec-title"><svg width="236px" height="43px" viewBox="0 0 472 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="horizontal_blue_CMYK" fill="#0091D0" fill-rule="nonzero">
+            <path d="M82.9,22.8 C66.8,22.8 52.8,34.2 52.8,52.4 C52.8,68.7 64.7,80.9 84.3,80.9 C100.4,80.9 114.5,69.5 114.5,51.3 C114.4,35 102.5,22.8 82.9,22.8 Z M86.5,76.4 C84.5,76.4 82.7,74.6 81.2,70.7 C78.2,63.3 76.1,52.3 76.1,39.8 C76.1,30.8 78.3,27.4 80.9,27.4 C82.9,27.4 84.7,29.2 86.2,33.1 C89.2,40.5 91.3,51.5 91.3,64 C91.3,72.9 89.1,76.4 86.5,76.4 Z M416.2,59.8 C415.9,59.5 415.7,59.4 415.4,59.4 C414.3,59.4 410.6,64.7 403.7,64.7 C393.9,64.7 387.5,58.2 384.8,49.1 L413.2,49.1 C414.5,49.1 414.8,48.7 414.8,47.5 C414.8,32.1 406,22.8 391.6,22.8 C376.3,22.8 363.6,35.4 363.6,52 C363.6,69.7 375.8,80.9 390.2,80.9 C400.5,80.9 409.5,75.9 415.8,63.7 C416.6,62.3 416.9,61.4 416.9,60.9 C416.9,60.6 416.8,60.4 416.6,60.1 L416.2,59.8 Z M389.3,27.4 C392.4,27.4 394.6,30.6 394.6,40.2 C394.6,43.2 394,43.7 392.1,43.9 L383.9,44.7 C383.6,42.8 383.5,40.9 383.5,39 C383.5,30.9 386,27.4 389.3,27.4 Z M54.5,9.9 C51.9,10.7 51.2,11.1 50.4,12 C49.1,13.4 48.6,16.4 48.6,34 L48.6,51.6 C48.6,77.1 38.6,85.5 20.9,85.5 C7.9,85.5 0,78.5 0,69.4 C0,62.8 5.7,58.7 16.1,58.3 C16.9,58.3 17.5,58.6 17.5,59.6 C17.5,60.9 16.9,62.9 16.9,67.3 C16.9,75.4 19.8,79.2 22.8,79.2 C24.6,79.2 25.7,77.5 25.7,73.7 C25.7,68 25.3,62 25.3,57.1 L25.3,34 C25.3,16.3 24.5,13.6 23.3,12.2 C22.4,11.1 20.9,10.4 16.5,9.8 C15.4,9.6 14.9,9.2 14.9,8.3 L14.9,7.5 C14.9,6.5 15.3,6.2 16.1,6.2 C21.3,6.2 30.3,6.6 36.6,6.6 C42.9,6.6 50.2,6.2 55,6.2 C55.8,6.2 56.2,6.5 56.2,7.5 L56.2,8.3 C56.1,9.2 55.7,9.6 54.5,9.9 Z M470.7,60.1 L470.4,59.8 C470.1,59.5 469.9,59.4 469.6,59.4 C468.5,59.4 464.8,64.7 457.9,64.7 C448.1,64.7 441.7,58.2 439,49.1 L467.4,49.1 C468.7,49.1 469,48.7 469,47.5 C469,32.1 460.2,22.8 445.8,22.8 C430.5,22.8 417.8,35.4 417.8,52 C417.8,69.7 430,80.9 444.4,80.9 C454.7,80.9 463.7,75.9 470,63.7 C470.8,62.3 471.1,61.4 471.1,60.9 C471,60.6 470.9,60.3 470.7,60.1 Z M443.5,27.4 C446.6,27.4 448.8,30.6 448.8,40.2 C448.8,43.2 448.2,43.7 446.3,43.9 L438.1,44.7 C437.8,42.8 437.7,40.9 437.7,39 C437.7,30.9 440.2,27.4 443.5,27.4 Z M367.1,77.1 L367.1,78.1 C367.1,79.1 366.8,79.4 365.8,79.4 C362.8,79.4 356,79 348.7,79 C342,79 335.8,79.4 331.8,79.4 C330.8,79.4 330.5,79.1 330.5,78.1 L330.5,77.1 C330.5,76.3 330.8,76 331.7,75.8 C333.8,75.4 334.6,75 334.9,74.3 C335.4,73.2 335.6,71.4 335.6,53.1 L335.6,29 L322.7,29 L322.7,53.2 C322.7,71.6 322.9,73.4 323.4,74.4 C323.7,75.2 324.5,75.5 326.6,75.9 C327.5,76 327.8,76.4 327.8,77.2 L327.8,78.2 C327.8,79.2 327.5,79.5 326.5,79.5 C322.5,79.5 316.3,79.1 309.6,79.1 C302.3,79.1 295.5,79.5 292.5,79.5 C291.5,79.5 291.2,79.2 291.2,78.2 L291.2,77.2 C291.2,76.2 291.6,76 292.4,75.9 C296.6,75.5 297.8,75.2 298.5,74.4 C299.3,73.5 299.6,71.8 299.6,53.2 L299.6,29 L292.2,29 C291.2,29 290.9,28.7 290.9,27.7 L290.9,26.3 C290.9,25.3 291.2,25 292.2,24.9 L299.8,24.3 C301,10 311.1,0.8 324.5,0.8 C333,0.8 338,6.1 338,10.3 C338,13.6 335.3,16.3 329.7,16.7 C328.8,16.8 328.3,16.2 328.3,15.3 C328.3,14.7 328.5,13.6 328.5,12.6 C328.5,7.3 327.1,4.7 325.5,4.7 C323.8,4.7 322.4,7.1 322.4,14.2 C322.4,16.9 322.5,20.6 322.7,24.4 L335.9,24.4 C337.3,9.7 347.2,0 361.7,0 C371.8,0 378,6 378,11.3 C378,14.8 375.6,17.3 368.5,17.8 C367.6,17.9 367.1,17.3 367.1,16.4 C367.1,15.6 367.3,14.7 367.3,13.9 C367.3,7.2 365.7,3.9 363.4,3.9 C360.8,3.9 358.5,6.4 358.5,17.2 C358.5,18.8 358.6,21.4 358.7,24.3 L368.3,24.3 C369.3,24.3 369.6,24.6 369.6,25.6 L369.6,27.7 C369.6,28.7 369.3,29 368.3,29 L358.7,29 L358.7,53.2 C358.7,71.9 359,73.5 359.8,74.4 C360.5,75.2 361.7,75.5 365.9,75.9 C366.7,75.9 367.1,76.1 367.1,77.1 Z M169.8,59.8 C169.5,59.5 169.3,59.4 169,59.4 C167.9,59.4 164.2,64.7 157.3,64.7 C147.5,64.7 141.1,58.2 138.4,49.1 L166.8,49.1 C168.1,49.1 168.4,48.7 168.4,47.5 C168.4,32.1 159.6,22.8 145.2,22.8 C129.9,22.8 117.2,35.4 117.2,52 C117.2,69.7 129.4,80.9 143.8,80.9 C154.1,80.9 163.1,75.9 169.4,63.7 C170.2,62.3 170.5,61.4 170.5,60.9 C170.5,60.6 170.4,60.4 170.2,60.1 L169.8,59.8 Z M142.9,27.4 C146,27.4 148.2,30.6 148.2,40.2 C148.2,43.2 147.6,43.7 145.7,43.9 L137.5,44.7 C137.2,42.8 137.1,40.9 137.1,39 C137.1,30.9 139.6,27.4 142.9,27.4 Z M263.6,22.8 C247.5,22.8 233.5,34.2 233.5,52.4 C233.5,54.8 233.8,57.1 234.3,59.3 C230.3,62.5 225.3,64.2 220.1,64.2 C206.8,64.2 197.5,53.6 197.5,35.5 C197.5,17.4 204.3,9.2 210.4,9.2 C215.1,9.2 217.8,13.9 217.8,22.4 C217.8,26.3 217.1,29.2 217.1,30.6 C217.1,31.5 217.6,32 218.5,32 C229.9,31.5 233.8,27.2 233.8,20.5 C233.8,12 225.1,4.8 210.9,4.8 C192.1,4.8 173.7,21.1 173.7,46.1 C173.7,66.4 188.2,80.9 206.7,80.9 C219.8,80.9 230.1,73.3 235.3,62.7 C239.3,73.6 249.8,80.9 265,80.9 C281.1,80.9 295.2,69.5 295.2,51.3 C295.2,35 283.2,22.8 263.6,22.8 Z M267.2,76.4 C265.2,76.4 263.4,74.6 261.9,70.7 C258.9,63.3 256.8,52.3 256.8,39.8 C256.8,30.8 259,27.4 261.6,27.4 C263.6,27.4 265.4,29.2 266.9,33.1 C269.9,40.5 272,51.5 272,64 C272,72.9 269.8,76.4 267.2,76.4 Z" id="Shape"></path>
+            </g>
+            </g>
+            </svg>
+        </div>
+        <div class="sec-names">
+            <a>SHOP</a>
+            <a>THE WORKSHOP</a>
+            <a>DISCOVER</a>
+            <a>CATERING</a>
+            <a>CAREERS</a>
+            <a>LOCATIONS</a>
+            <a>WHOLESALE</a>          
+        </div>
+        <div class="sec-order">
+            ORDER ONLINE
+        </div>
+        <div class="sec-profile">
+            <a href="./page02.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="sec-search">
+            <a href="./page03.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <div class="sec-bag">
+            <sup>0</sup>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image.jpg" class="d-block w-100" alt="image">
+          </div>
+          <div class="carousel-item">
+            <img src="image2.jpg" class="d-block w-100" alt="image2">
+          </div>
+          <div class="carousel-item">
+            <img src="image3.jpg" class="d-block w-100" alt="image3">
+          </div>
+        </div>
+    </div>
+
+    <div class="nav-third">
+        <div class="third-one box">
+            <div class="img">
+                <img src="image5.webp"/>
+            </div>
+            <h2>Anjali's Cup Resilience Turmeric Elixir Box of 10 Single Sachets</h2>
+            <p>$17.00</p>
+        </div>
+        <div class="third-two box">
+            <div class="img">
+                <img src="image4.webp"/>
+            </div>
+            <h2>Signature Coffee Set</h2>
+            <p>$22.00</p>
+        </div>
+        <div class="third-three box">
+            <div class="img">
+                <img src="image6.webp"/>
+            </div>
+            <h2>Tote Bag</h2>
+            <p>$18.00</p>
+        </div>
+    </div>
+
+    <div class="nav-fourth">
+            <div class="col" style="background-image: url('coffeee.jpg');"></div>
+    </div>
+
+    <div class="nav-fifth">
+        <div class="fifth-one box">
+            <div class="img">
+                <img src="new.webp"/>
+            </div>
+            <h2>Classes</h2>
+            <p>FFrom manual brewing and latte art to full barista courses,we offer variety of classes for every skill level!</p>
+        </div>
+        <div class="fifth-two box">
+            <div class="img">
+                <img src="new2.webp"/>
+            </div>
+            <h2>Wholesale</h2>
+            <p>Interested in serving Joe Coffee?Learn more abbout our wholesale program</p>
+        </div>
+        <div class="fifth-three box">
+            <div class="img">
+                <img src="new3.webp"/>
+            </div>
+            <h2>Event Catering</h2>
+            <p>Have an event that needs catering?Book a custom coffee bar for your next meeting or event</p>
+        </div>
+    </div>
+
+    <div class="nav-sixth">
+        <div class="sixth-one">
+            <img src="latest.webp" alt="latest"/>
+        </div>
+        <div class="sixth-two">
+            <h3>CONNECT WITH US</h3>
+            <div class="sixth-sub">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="sixth-three under">   
+            <h5>SHOP</h5>
+            <a>Signature Coffees</a>
+            <a>Specialty Instant</a>
+            <a>Subscribe</a>
+            <a>Brew Gear</a>
+            <a>Merchandise</a>
+            <a>The Workshop</a>
+            <a>Cart</a>
+            <a>My Account</a>           
+        </div>
+        <div class="sixth-three under">   
+            <h5>Learn</h5>
+            <a>Wholesale</a>
+            <a>Locations</a>
+            <a>Contact</a>
+            <a>Blog</a>
+            <a>Frequently Asked Questions</a>
+            <a>Privacy Policy</a>
+            <a>Accessibility Statement</a>
+            <a>Download Our App</a>           
+        </div>
+    </div>
+    <footer>
+        <div class="footer-one">
+        <pre>
+            Copyright © 2019 Joe Coffee
+            All rights reserved
+            Made by Needmore
+        </pre>
+        </div>
+        <div class="footer-two">
+            <input type="text" placeholder="sign up for our newspaper">
+            <div class="msg">Subscribe</div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</body>
+</html>
